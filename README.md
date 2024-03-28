@@ -69,7 +69,7 @@ __первой__ подреализации.
 ### Вторая подреализация
 График зависимости кол-ва тиков от номера измерения
 для версии без оптимизации
-![Alt text](https://github.com/SANEKDASH/Mandelbrot-optimization/blob/main/readme_src/mandelbrot_graph2.png)
+![Alt text](https://github.com/SANEKDASH/Mandelbrot-optimization/blob/main/readme_src/mandelbrot_graph3.png)
 
 
 График зависимости кол-ва тиков от номера измерения
