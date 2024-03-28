@@ -97,8 +97,6 @@ int main()
 
         time_count_end = _rdtsc();
 
-        printf("Obtained data count: %ld\n", obtained_data_count);
-
         if (obtained_data_count <= 200 && obtained_data_count >= 101)
         {
             fprintf(data_file ,"%ld %d\n", obtained_data_count - 100,
