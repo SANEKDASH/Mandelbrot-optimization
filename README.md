@@ -51,12 +51,12 @@ __первой__ подреализации.
 
 График зависимости кол-ва тиков от номера измерения
 для версии без оптимизации
-![Alt text](mandelbrot_graph0.png)
+![Alt text](https://github.com/SANEKDASH/Mandelbrot-optimization/blob/main/readme_src/mandelbrot_graph0.png)
 
 
 График зависимости кол-ва тиков от номера измерения
 для версии с оптимизацией
-![Alt text](mandelbrot_graph1.png)
+![Alt text](https://github.com/SANEKDASH/Mandelbrot-optimization/blob/main/readme_src/mandelbrot_graph1.png)
 
 Видим, что оба значения кол-ва тиков не зависят от номера измерения. Следовательно можем взять для каждого среднее и получить окончательно.
 
@@ -69,12 +69,12 @@ __первой__ подреализации.
 ### Вторая подреализация
 График зависимости кол-ва тиков от номера измерения
 для версии без оптимизации
-![Alt text](mandelbrot_graph3.png)
+![Alt text](https://github.com/SANEKDASH/Mandelbrot-optimization/blob/main/readme_src/mandelbrot_graph2.png)
 
 
 График зависимости кол-ва тиков от номера измерения
 для версии с оптимизацией
-![Alt text](mandelbrot_graph4.png)
+![Alt text](https://github.com/SANEKDASH/Mandelbrot-optimization/blob/main/readme_src/mandelbrot_graph4.png)
 
 |              |    без оптимизации     |     с оптимизацией     |
 |--------------|:----------------------:|:----------------------:|
