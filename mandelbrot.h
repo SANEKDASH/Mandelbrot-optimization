@@ -4,27 +4,40 @@
 
 #include <SFML/Graphics.hpp>
 
+#ifdef SPEED_TEST
+
+    #define SPEED_TEST_ONLY(...) __VA_ARGS__
+
+#else
+
+    #define SPEED_TEST_ONLY(...) ;
+
+#endif
+
 static const size_t kWindowHeight = 720;
 static const size_t kWindowWidth  = 1280;
 
-#ifdef SFML_BUFFER
-void PrintMandelbrot(sf::RenderWindow &window);
+static const size_t kColorAttrNumber = 4;
 
-#else
-void PrintMandelbrot(sf::RenderWindow &window,
-                     sf::Uint8        *pixel_array);
-#endif
+struct ViewProperties
+{
+    float scale;
+    float x_shift;
+    float y_shift;
+};
 
-/*
-void DIY_AVX_PrintMandelbrot(sf::RenderWindow &window);
-*/
+typedef enum MandelbrotErrs
+{
+    kMandelbrotSuccess,
+    kNullPixelArray,
+};
 
-#ifdef SFML_BUFFER
-void AVX_PrintMandelbrot(sf::RenderWindow &window);
+MandelbrotErrs PrintMandelbrot(sf::RenderWindow &window,
+                               sf::Uint8        *pixel_array,
+                               ViewProperties   *view_properties);
 
-#else
-void AVX_PrintMandelbrot(sf::RenderWindow &window,
-                         sf::Uint8        *pixel_array);
-#endif
+MandelbrotErrs AVX_PrintMandelbrot(sf::RenderWindow &window,
+                                   sf::Uint8        *pixel_array,
+                                   ViewProperties   *view_properties);
 
 #endif

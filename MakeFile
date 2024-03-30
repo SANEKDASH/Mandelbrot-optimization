@@ -1,15 +1,21 @@
 CC=g++
-CFLAGS=-c -march=native -DAVX_IMPLEMENT
+
+CFLAGS=-c -march=native -O3 -DSPEED_TEST
+
 LDFLAGS=
+
 SOURCES=main.cpp mandelbrot.cpp
+
 LIBRARIES=-lsfml-graphics -lsfml-window -lsfml-system
-OBJECTS=$(SOURCES:.cpp=.o)
+
+DEFAULT_OBJECTS=$(SOURCES:.cpp=.o)
+
 EXECUTABLE=Mandelbrot
 
 all: $(SOURCES) $(EXECUTABLE)
 
-$(EXECUTABLE): $(OBJECTS)
-	$(CC) $(LDFLAGS) $(OBJECTS) -o $@ $(LIBRARIES)
+$(EXECUTABLE): $(DEFAULT_OBJECTS)
+	$(CC) $(LDFLAGS) $(DEFAULT_OBJECTS) -o $@ $(LIBRARIES)
 
 .cpp.o:
 	$(CC) $(CFLAGS) $< -o $@
