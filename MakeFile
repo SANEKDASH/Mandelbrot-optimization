@@ -1,6 +1,6 @@
 CC=g++
 
-CFLAGS=-c -march=native -O3 -DSPEED_TEST
+CFLAGS=-c -march=native -O3 -DAVX_IMPLEMENT
 
 LDFLAGS=
 
