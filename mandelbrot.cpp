@@ -134,11 +134,6 @@ MandelbrotErrs AVX_PrintMandelbrot(sf::RenderWindow &window,
                                                          _mm256_set1_ps(kDevX * view_properties->scale)),
                                            _mm256_set1_ps(view_properties->x_shift * kDevX));
 
-/*            __m256 start_x = _mm256_mul_ps(_mm256_add_ps(_76543210,
-                                                         _mm256_add_ps(_mm256_set1_ps((float) int_x),
-                                                                       _mm256_set1_ps(        curr_x))),
-                                           _mm256_set1_ps(kDevX * view_properties->scale));
-*/
             __m256 start_y = _mm256_set1_ps(curr_y);
 
             __m256 new_x = start_x;
